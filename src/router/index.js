@@ -4,19 +4,24 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const customRoute = [
+const routes = [
   {
     path:'/',
-    component: () => import('../components/c.vue')
+    redirect: '/audit/platform'
   },
   {
-    path: '/audit-platform',
-    name: '/audit-platform',
+    path: '/audit/platform',
+    name: '/audit/platform',
     component: () => import('../components/auditPlatform.vue')
+  },
+  {
+    path: '/audit/platform/:userId',
+    name: '/audit/platform/:userId',
+    component: () => import('../components/industry')
   }
 ]
 
 const router = new VueRouter({
-  customRoute
+  routes
 })
 export default router

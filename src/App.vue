@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <header>
-      <router-link to="/audit-platform">审批中心</router-link>
-    </header>
+    <div class="bread-list">
+      <el-breadcrumb>
+        <el-breadcrumb-item style="font-size: 30px">
+          xx平台审核列表页
+        </el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
     <router-view></router-view>  
   </div>
 </template>
@@ -12,14 +16,20 @@
 export default {
   name: 'app',
   created() {
-    /* eslint-disable */ 
-    console.log(this.$router, this.$route)
   },
   components: {
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.bread-list {
+  margin-top: 30px;
+}
+.bread-list /deep/ .el-breadcrumb__inner {
+  padding-left: 20px;
+  font-size: 30px;
+  /* color: #fff; */
+  font-weight: 700;
+}
 </style>

@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import './mock/index'
 
 Vue.config.productionTip = false
-Vue.prototype.$http = instance
+Vue.prototype.$http = http
 
 Vue.use(ElementUI);
 new Vue({
